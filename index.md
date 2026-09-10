@@ -1,35 +1,41 @@
 
 # Table of Contents
 
-1.  [Welcome](#org5193a97)
-2.  [Research Themes](#orgf3915be)
-3.  [Upcoming Schedule](#org3ed7262)
+1.  [Welcome](#orga865457)
+2.  [Research Themes](#org90ed6d3)
+3.  [Upcoming Schedule](#orgb4aaacc)
+
+This interest group explores ways of thinking about computation that depart from the familiar picture of an explicit sequence of operations on explicitly represented data. We are particularly interested in cases where computational behavior depends on the organization of a system’s state space, its constraints, correlations, geometry, dynamics, symmetries, or collective properties.
+
+The term *quantum-inspired* is intended as a provocation and a demarcation. Quantum systems offer a striking example: their evolution can exploit amplitudes, phases, interference, and correlations that are not individually available in the final classical readout. However, we would like to ask where analogous distinctions between readable content and computationally active structure appear in classical models.
+
+Possible topics include constraint-based computation, analog and dynamical systems, unconventional representations, stochastic and reversible computing, collective or biological computation, and the foundations and limits of computational models. Established subjects such as quantum computing and neural networks are welcome when they illuminate these questions, rather than serving only as general introductions or applications.
+
+The group does not begin with a settled definition of unconventional computation. Our purpose is precisely to find out better language and criteria for asking what does the computational work, what resources are being exploited, and whether a proposed departure from conventional computing is substantive or merely descriptive.
 
 
-
-<a id="org5193a97"></a>
+<a id="orga865457"></a>
 
 # Welcome
 
-We explore spin glass models, Boolean circuit representations, simulated bifurcation, and optical computing architectures.
+We explore spin glass models, Boolean circuit representations, and optical computing architectures.
 
 <div class="invite-box">
-  <strong>Join Upcoming Meetings:</strong> All sessions take place bi-weekly via Zoom. 
-  To preserve discussion quality, meetings are currently by invitation. 
-  <a href="mailto:organizer@institution.edu?subject=Group%20Invitation%20Request">Request an Invite</a>.
+  <strong>Join Upcoming Meetings:</strong> All sessions take place on Mondays at 7 PM ET via Zoom. 
+  Meetings are currently by invitation. 
+  <a href="mailto:merement@umich.edu?subject=QIUC Group%20Invitation%20Request">Request an Invite</a>.
 </div>
 
 
-<a id="orgf3915be"></a>
+<a id="org90ed6d3"></a>
 
 # Research Themes
 
 -   Ising formulations of combinatorial search ($H = -\sum J_{ij} s_i s_j$)
 -   Normalized spin representations of Boolean logic
--   Graph curvature metrics and network embedding
 
 
-<a id="org3ed7262"></a>
+<a id="orgb4aaacc"></a>
 
 # Upcoming Schedule
 
@@ -42,23 +48,25 @@ We explore spin glass models, Boolean circuit representations, simulated bifurca
 <col  class="org-left" />
 
 <col  class="org-left" />
-
-<col  class="org-left" />
 </colgroup>
 <thead>
 <tr>
 <th scope="col" class="org-left">Date</th>
 <th scope="col" class="org-left">Speaker</th>
 <th scope="col" class="org-left">Topic</th>
-<th scope="col" class="org-left">Reading / Reference</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="org-left">Sep 22</td>
-<td class="org-left">TBD</td>
-<td class="org-left">Spin Gate Formulations</td>
-<td class="org-left">Parhami (Carry Adders)</td>
+<td class="org-left">Sep 14</td>
+<td class="org-left">ME</td>
+<td class="org-left">Overall scope and Ising computing</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
 </tr>
 </tbody>
 </table>
