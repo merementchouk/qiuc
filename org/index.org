@@ -1,0 +1,27 @@
+#+BEGIN_EXPORT yaml
+---
+layout: default
+title: Quantum-Inspired Unconventional Computing
+---
+#+END_EXPORT
+
+* Welcome
+We explore spin glass models, Boolean circuit representations, simulated bifurcation, and optical computing architectures.
+
+#+BEGIN_EXPORT html
+<div class="invite-box">
+  <strong>Join Upcoming Meetings:</strong> All sessions take place bi-weekly via Zoom. 
+  To preserve discussion quality, meetings are currently by invitation. 
+  <a href="mailto:organizer@institution.edu?subject=Group%20Invitation%20Request">Request an Invite</a>.
+</div>
+#+END_EXPORT
+
+* Research Themes
+- Ising formulations of combinatorial search ($H = -\sum J_{ij} s_i s_j$)
+- Normalized spin representations of Boolean logic
+- Graph curvature metrics and network embedding
+
+* Upcoming Schedule
+| Date | Speaker | Topic | Reading / Reference |
+|------+---------+-------+---------------------|
+| Sep 22 | TBD | Spin Gate Formulations | Parhami (Carry Adders) |

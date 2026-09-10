@@ -1,0 +1,12 @@
+title: Quantum-Inspired Unconventional Computing
+description: Research group discussions, seminars, and reading sessions.
+baseurl: "/qiuc"
+url: "https://merementchouk.github.io"
+
+markdown: kramdown
+kramdown:
+  math_engine: null # Prevent kramdown from mangling raw LaTeX for KaTeX
+exclude:
+  - org/
+  - README.md
+
