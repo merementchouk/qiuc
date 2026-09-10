@@ -1,13 +1,13 @@
 
 # Table of Contents
 
-1.  [Welcome](#org9a16ed2)
-2.  [Research Themes](#orgf0cef56)
-3.  [Upcoming Schedule](#orgedfd65b)
+1.  [Welcome](#org5193a97)
+2.  [Research Themes](#orgf3915be)
+3.  [Upcoming Schedule](#org3ed7262)
 
 
 
-<a id="org9a16ed2"></a>
+<a id="org5193a97"></a>
 
 # Welcome
 
@@ -20,7 +20,7 @@ We explore spin glass models, Boolean circuit representations, simulated bifurca
 </div>
 
 
-<a id="orgf0cef56"></a>
+<a id="orgf3915be"></a>
 
 # Research Themes
 
@@ -29,7 +29,7 @@ We explore spin glass models, Boolean circuit representations, simulated bifurca
 -   Graph curvature metrics and network embedding
 
 
-<a id="orgedfd65b"></a>
+<a id="org3ed7262"></a>
 
 # Upcoming Schedule
 

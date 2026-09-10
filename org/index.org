@@ -1,3 +1,5 @@
+#+EXPORT_FILE_NAME: ../index.md
+
 #+BEGIN_EXPORT yaml
 ---
 layout: default
