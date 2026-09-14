@@ -7,10 +7,20 @@ remote_theme: pages-themes/tactile@v0.2.0
 plugins:
 - jekyll-remote-theme
 
+# Site Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: Past Meetings
+    url: /past-meetings.html
+  - title: Research Topics
+    url: /topics.html
+
 markdown: kramdown
 kramdown:
   math_engine: null # Prevent kramdown from mangling raw LaTeX for KaTeX
 exclude:
   - org/
   - README.md
+  - .dir-locals.el
 

@@ -52,17 +52,17 @@ min.js"
     <div id="container">
       <div class="inner">
 
-        <header>
+      <header>
           <h1>{{ site.title | default: page.title | default:
 site.github.repository_name }}</h1>
           <h2>{{ site.description | default: page.description | default:
 site.github.project_tagline }}</h2>
 
-          <!-- Navigation Links -->
+          <!-- Dynamic Navigation Links -->
           <nav class="site-nav">
-            <a href="{{ '/' | relative_url }}">Home</a>
-            <a href="{{ '/past-meetings.html' | relative_url }}">Past
-Meetings</a>
+            {% for link in site.navigation %}
+              <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
+            {% endfor %}
           </nav>
         </header>
 
