@@ -1,10 +1,3 @@
-
-# Table of Contents
-
-1.  [Welcome](#orga865457)
-2.  [Research Themes](#org90ed6d3)
-3.  [Upcoming Schedule](#orgb4aaacc)
-
 This interest group explores ways of thinking about computation that depart from the familiar picture of an explicit sequence of operations on explicitly represented data. We are particularly interested in cases where computational behavior depends on the organization of a system’s state space, its constraints, correlations, geometry, dynamics, symmetries, or collective properties.
 
 The term *quantum-inspired* is intended as a provocation and a demarcation. Quantum systems offer a striking example: their evolution can exploit amplitudes, phases, interference, and correlations that are not individually available in the final classical readout. However, we would like to ask where analogous distinctions between readable content and computationally active structure appear in classical models.
@@ -13,8 +6,6 @@ Possible topics include constraint-based computation, analog and dynamical syste
 
 The group does not begin with a settled definition of unconventional computation. Our purpose is precisely to find out better language and criteria for asking what does the computational work, what resources are being exploited, and whether a proposed departure from conventional computing is substantive or merely descriptive.
 
-
-<a id="orga865457"></a>
 
 # Welcome
 
@@ -27,47 +18,15 @@ We explore spin glass models, Boolean circuit representations, and optical compu
 </div>
 
 
-<a id="org90ed6d3"></a>
-
 # Research Themes
 
 -   Ising formulations of combinatorial search ($H = -\sum J_{ij} s_i s_j$)
 -   Normalized spin representations of Boolean logic
 
 
-<a id="orgb4aaacc"></a>
-
 # Upcoming Schedule
 
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">Date</th>
-<th scope="col" class="org-left">Speaker</th>
-<th scope="col" class="org-left">Topic</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="org-left">Sep 14</td>
-<td class="org-left">ME</td>
-<td class="org-left">Overall scope and Ising computing</td>
-</tr>
-
-<tr>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-</tr>
-</tbody>
-</table>
-
+| Date   | Speaker | Topic                             |
+|------ |------- |--------------------------------- |
+| Sep 14 | ME      | Overall scope and Ising computing |
+|        |         |                                   |

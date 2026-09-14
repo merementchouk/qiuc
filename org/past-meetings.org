@@ -1,0 +1,5 @@
+#+TITLE: Past Meetings
+#+SUBTITLE: Structure, state, and dynamics as computational resources
+#+OPTIONS: toc:nil title:nil
+
+* Past Meetings

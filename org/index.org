@@ -1,6 +1,6 @@
-#+EXPORT_FILE_NAME: ../index.md
 #+TITLE: Quantum-Inspired Unconventional Computing
 #+SUBTITLE: Structure, state, and dynamics as computational resources
+#+OPTIONS: toc:nil title:nil
 
 This interest group explores ways of thinking about computation that depart from the familiar picture of an explicit sequence of operations on explicitly represented data. We are particularly interested in cases where computational behavior depends on the organization of a system’s state space, its constraints, correlations, geometry, dynamics, symmetries, or collective properties.
 
