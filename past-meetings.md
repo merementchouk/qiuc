@@ -1,1 +1,24 @@
 # Past Meetings
+
+Here, recaps and additional materials for past meetings are presented in the inverse chronological order.
+
+
+# <span class="timestamp-wrapper"><span class="timestamp">&lt;2026-09-14 Mon&gt;</span></span>
+
+The PDF file with the meeting notes can be found [here](./assets/meetings/2026-09-14/QIUC Notes 2026-09-14.pdf)
+
+
+## Quick recap
+
+Mikhail presented an introduction to unconventional computing by considering a problem of finding paths in bipartite directed graphs, given that such paths exist.
+
+Mikhail demonstrated standard approaches like depth-first and breadth-first search before presenting an unconventional algorithm that represented the graph's edges as binary spins and encoded the problem as a constraint satisfaction issue.
+
+He explained how the algorithm encodes problem data in a novel way using binary spins (sigma values) and charge quantities (Q), then solves the problem by finding configurations that minimize the Q-squared energy function. The discussion covered how this approach represents a shift from conventional computing paradigms to constrained programming and unconventional computing methods.
+
+Mikhail announced plans to explore additional algorithms and computing models in future meetings, including the V2 model of relaxation-based dynamical easing machines and other unconventional computing approaches. He also raised the question of recognizing computation in physical systems.
+
+
+## Details
+
+Coming soon &#x2026;

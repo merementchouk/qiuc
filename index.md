@@ -7,26 +7,19 @@ Possible topics include constraint-based computation, analog and dynamical syste
 The group does not begin with a settled definition of unconventional computation. Our purpose is precisely to find out better language and criteria for asking what does the computational work, what resources are being exploited, and whether a proposed departure from conventional computing is substantive or merely descriptive.
 
 
-# Welcome
+# Upcoming Schedule
 
-We explore spin glass models, Boolean circuit representations, and optical computing architectures.
+| Date   | Speaker | Topic                              |
+|------ |------- |---------------------------------- |
+| Sep 14 | ME      | Overall scope and Ising computing  |
+| Sep 21 | ME      | More spin algorithms and V-2 model |
+|        |         |                                    |
+
+
+# Joining the discussions
 
 <div class="invite-box">
   <strong>Join Upcoming Meetings:</strong> All sessions take place on Mondays at 7 PM ET via Zoom. 
   Meetings are currently by invitation. 
   <a href="mailto:merement@umich.edu?subject=QIUC Group%20Invitation%20Request">Request an Invite</a>.
 </div>
-
-
-# Research Themes
-
--   Ising formulations of combinatorial search ($H = -\sum J_{ij} s_i s_j$)
--   Normalized spin representations of Boolean logic
-
-
-# Upcoming Schedule
-
-| Date   | Speaker | Topic                             |
-|------ |------- |--------------------------------- |
-| Sep 14 | ME      | Overall scope and Ising computing |
-|        |         |                                   |

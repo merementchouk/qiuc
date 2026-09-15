@@ -10,9 +10,15 @@ Possible topics include constraint-based computation, analog and dynamical syste
 
 The group does not begin with a settled definition of unconventional computation. Our purpose is precisely to find out better language and criteria for asking what does the computational work, what resources are being exploited, and whether a proposed departure from conventional computing is substantive or merely descriptive.
 
+* Upcoming Schedule
 
-* Welcome
-We explore spin glass models, Boolean circuit representations, and optical computing architectures.
+| Date   | Speaker | Topic                              |
+|--------+---------+------------------------------------|
+| Sep 14 | ME      | Overall scope and Ising computing  |
+| Sep 21 | ME      | More spin algorithms and V-2 model |
+|        |         |                                    |
+
+* Joining the discussions
 
 #+BEGIN_EXPORT html
 <div class="invite-box">
@@ -22,13 +28,3 @@ We explore spin glass models, Boolean circuit representations, and optical compu
 </div>
 #+END_EXPORT
 
-* Research Themes
-- Ising formulations of combinatorial search ($H = -\sum J_{ij} s_i s_j$)
-- Normalized spin representations of Boolean logic
-
-* Upcoming Schedule
-
-| Date   | Speaker | Topic                                  |
-|--------+---------+----------------------------------------|
-| Sep 14 | ME      | Overall scope and Ising computing |
-|        |         |                                        |
