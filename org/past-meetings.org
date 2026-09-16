@@ -16,15 +16,15 @@ Mikhail presented an introduction to unconventional computing by considering a p
 
 Mikhail demonstrated standard approaches like depth-first and breadth-first search before presenting an unconventional algorithm that represented the graph's edges as binary spins and encoded the problem as a constraint satisfaction issue.
 
-He explained how the algorithm encodes problem data in a novel way using binary spins (sigma values) and charge quantities (Q), then solves the problem by finding configurations that minimize the Q-squared energy function. The discussion covered how this approach represents a shift from conventional computing paradigms to constrained programming and unconventional computing methods.
+He explained how the algorithm encodes problem data in a novel way using binary spins and respectively defined charge quantities, $Q$, then solves the problem by finding configurations that minimize the $Q$-squared energy function. The discussion covered how this approach represents a shift from conventional computing paradigms to constrained programming and unconventional computing methods.
 
-Mikhail announced plans to explore additional algorithms and computing models in future meetings, including the V2 model of relaxation-based dynamical easing machines and other unconventional computing approaches. He also raised the question of recognizing computation in physical systems.
+Mikhail announced plans to explore additional algorithms and computing models in future meetings, including the V-2 model of relaxation-based dynamical easing machines and other unconventional computing approaches. He also raised the question of recognizing computation in physical systems.
 
 ** Details
 
 To illustrate a distinction between conventional and unconventional computing, we consider a problem of finding a path in a bipartite directed graph.
 
-As a brief reminder, a graph \[\mathcal{G} = \left\{ \mathcal{V}, \mathcal{E} \right\}\] is called /bipartite/, if its set of edges is partitioned into two parts \[\mathcal{V} = \mathcal{V}^{(1)} \sqcup \mathcal{V}^{(2)}\], such that there are edges with endpoints in different partitions, but there are no edges with endpoints in the same partition. A graph is directed if edges have a direction: the respective pairs of incident nodes are ordered, and one pair can be regarded as the head and the other one as the tail.
+As a brief reminder, a graph $\mathcal{G} = \left\{ \mathcal{V}, \mathcal{E} \right\}$, with the set of $N$ nodes $\mathcal{V}$ and the set of $M$ nodes $\mathcal{E}$, is called /bipartite/, if its set of edges is partitioned into two parts $\mathcal{V} = \mathcal{V}^{(1)} \sqcup \mathcal{V}^{(2)}$, such that there are edges with endpoints in different partitions, but there are no edges with endpoints in the same partition. A graph is directed if edges have a direction: the respective pairs of incident nodes are ordered, and one pair can be regarded as the head and the other one as the tail.
 
 Finally, we consider simple graphs: there is at most one edge connecting any two nodes.
 
@@ -38,7 +38,7 @@ It is known that there is a path from node 1 to node 5. How to find it?
 
 *** Depth-first algorithm
 
-We can employ a version of the depth-first search (DFS) and check one-by-one available option.
+We can employ a version of the depth-first search (DFS) and check one-by-one available options for continuing a path starting from node 1.
 
 One such search may result in the path $1 \to 6 \to 2 \to 8 \to 1$ that returns us to the beginning. We can choose a different outgoing edge in node 8, which results in the path  $1 \to 6 \to 2 \to 8 \to 3$ that cannot be continued.
 
@@ -48,6 +48,27 @@ After a few more attempts, we will arrive to the path $1 \to 7 \to 4 \to 10 \to 
 
 We can represent the path finding problem in a completely different manner. This representation may appear as coming from nowhere, and this is on purpose: the objective is to demonstrate how unusual may look algorithms emerging within different areas of unconventional computing. Later, we will see how this representation may be derived as branching out from studying a different problem (discrete tomography). 
 
-We represent edges as binary variables, \[\sigma_m \in \left\{ -1, 1 \right\}\]
+We represent edges of the original graph by spin (binary) variables, $\sigma_m \in \left\{ -1, 1 \right\}$, with the sign chosen depending on the direction of the respective edge: if the edge goes from a node in $\mathcal{V}^{(1)}$ to a node in $\mathcal{V}^{(2)}$, we take $\sigma_m = -1$ and vice versa. For example, for the graph shown above, we have
+
+$$
+\boldsymbol{\sigma} = \left\{ -1, -1, 1, 1, -1, 1, 1, 1, 1, -1, -1, -1, 1 \right\} , 
+$$
+
+where \[\boldsymbol{\sigma} = \left\{ \sigma_1, \ldots, \sigma_{M} \right\}\] denotes the whole collection of the spin variables.
+
+For node $r \in 1, \ldots, N$, we define a charge
+
+$$
+Q(r; \boldsymbol{\sigma}) = \sum_{m \in \mathcal{I}(r)} \sigma_m + q_0(r)\sigma_0.
+$$
+
+Here, $\mathcal{I}(r)$ denotes the set of edges incident to node $r$, $\sigma_0 \equiv 1$ is the auxiliary spin, and $q_0(r)$ is defined in such a way that
+
+$$
+Q(r; \boldsymbol{\sigma}) =
+\begin{cases}
+0, & \qquad \text{if $r$ is not a path terminal point} \\
+\pm 2, & \qquad \text{if $r$ is a path terminal point}\end{cases}
+$$
 
 More coming soon ...
