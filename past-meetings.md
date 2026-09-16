@@ -49,20 +49,22 @@ We can represent the path finding problem in a completely different manner. This
 
 We represent edges of the original graph by spin (binary) variables, $\sigma_m \in \left\{ -1, 1 \right\}$, with the sign chosen depending on the direction of the respective edge: if the edge goes from a node in $\mathcal{V}^{(1)}$ to a node in $\mathcal{V}^{(2)}$, we take $\sigma_m = -1$ and vice versa. For example, for the graph shown above, we have
 
-$$ \boldsymbol{\sigma} = \left\{ -1, -1, 1, 1, -1, 1, 1, 1, 1, -1, -1, -1, 1 \right\} , $$
+$$\boldsymbol{\sigma} = \left\{ -1, -1, 1, 1, -1, 1, 1, 1, 1, -1, -1, -1, 1 \right\} ,$$
 
-where $\boldsymbol{\sigma} = \left\{ \sigma_1, \ldots, \sigma_{M} \right\}$ denotes the whole collection of the spin variables.
+where $\boldsymbol{\sigma} = \left\lbrace \sigma_1, \ldots, \sigma_{M} \right\rbrace$ denotes the whole collection of the spin variables.
 
 For node $r \in 1, \ldots, N$, we define a charge
 
-$$ Q(r; \boldsymbol{\sigma}) = \sum_{m \in \mathcal{I}(r)} \sigma_m + q_0(r)\sigma_0. $$
+$$Q(r; \boldsymbol{\sigma}) = \sum_{m \in \mathcal{I}(r)} \sigma_m + q_0(r)\sigma_0.$$
 
 Here, $\mathcal{I}(r)$ denotes the set of edges incident to node $r$, $\sigma_0 \equiv 1$ is the auxiliary spin, and $q_0(r)$ is defined in such a way that
 
-$$ Q(r; \boldsymbol{\sigma}) =
-\begin{cases}
-0, & \qquad \text{if $r$ is not a path terminal point} \\
-\pm 2, & \qquad \text{if $r$ is a path terminal point}\end{cases}
-$$
+$$Q(r; \boldsymbol{\sigma}) = \begin{cases} 0, & \qquad \text{if $r$ is not a path terminal point} \\ \pm 2, & \qquad \text{if $r$ is a path terminal point}\end{cases} $$
+
+For the terminal points, the sign of $Q(r; \boldsymbol{\sigma})$ is chosen as follows:
+
+$$\mathrm{sign}[Q(r; \boldsymbol{\sigma})] = s_1 s_2,$$
+
+where $s_1 = 1$, if $r \in \mathcal{V}^{(2)}$, and $s_1 = -1$, otherwise.
 
 More coming soon &#x2026;

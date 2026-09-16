@@ -65,6 +65,10 @@ $$Q(r; \boldsymbol{\sigma}) =
 0, & \qquad \text{if $r$ is not a path terminal point} \\
 \pm 2, & \qquad \text{if $r$ is a path terminal point}\end{cases} $$
 
-For the terminal points, the sign of $Q(r; \boldsymbol{\sigma})$ is chosen as follows
+For the terminal points, the sign of $Q(r; \boldsymbol{\sigma})$ is chosen as follows:
+
+\[\mathrm{sign}[Q(r; \boldsymbol{\sigma})] = s_1 s_2,\]
+
+where $s_1 = 1$, if $r \in \mathcal{V}^{(2)}$,  and $s_1 = -1$, otherwise.
 
 More coming soon ...
