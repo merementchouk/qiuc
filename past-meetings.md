@@ -60,11 +60,9 @@ $$ Q(r; \boldsymbol{\sigma}) = \sum_{m \in \mathcal{I}(r)} \sigma_m + q_0(r)\sig
 Here, $\mathcal{I}(r)$ denotes the set of edges incident to node $r$, $\sigma_0 \equiv 1$ is the auxiliary spin, and $q_0(r)$ is defined in such a way that
 
 $$ Q(r; \boldsymbol{\sigma}) =
-
 \begin{cases}
 0, & \qquad \text{if $r$ is not a path terminal point} \\
 \pm 2, & \qquad \text{if $r$ is a path terminal point}\end{cases}
-
 $$
 
 More coming soon &#x2026;
