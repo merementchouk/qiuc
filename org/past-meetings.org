@@ -4,11 +4,11 @@
 
 * Past Meetings
 
-Here, recaps and additional materials for past meetings are presented in the inverse chronological order.
+Here, recaps and additional materials for past meetings are presented.
 
-* <2026-09-14 Mon>
+* 2026-09-14 Mon
 
-The PDF file with the meeting notes can be found [[./assets/meetings/2026-09-14/QIUC Notes 2026-09-14.pdf][here]]
+The PDF file with the meeting (handwritten) notes can be found [[./assets/meetings/2026-09-14/QIUC Notes 2026-09-14.pdf][here]]
 
 ** Quick recap
 
@@ -22,4 +22,26 @@ Mikhail announced plans to explore additional algorithms and computing models in
 
 ** Details
 
-Coming soon ...
+To illustrate a distinction between conventional and unconventional computing, we consider a problem of finding a path in a bipartite directed graph.
+
+As a brief reminder, a graph \[\mathcal{G} = \left\{ \mathcal{V}, \mathcal{E} \right\}\] is called /bipartite/, if its set of edges is partitioned into two parts \[\mathcal{V} = \mathcal{V}^{(1)} \sqcup \mathcal{V}^{(2)}\], such that there are edges with endpoints in different partitions, but there are no edges with endpoints in the same partition. A graph is directed if edges have a direction: the respective pairs of incident nodes are ordered, and one pair can be regarded as the head and the other one as the tail.
+
+Finally, we consider simple graphs: there is at most one edge connecting any two nodes.
+
+An example of a bipartite directed graph may look like this
+
+#+NAME: fig:digraph-path-problem
+#+CAPTION: Find the valid path from node 1 to node 5 in this bipartite directed graph
+[[./assets/meetings/2026-09-14/path-graph.png]]
+
+It is known that there is a path from node 1 to node 5. How to find it?
+
+We can employ a version of the depth-first search (DFS) and check one-by-one available option.
+
+One such search may result in the path $1 \to 6 \to 2 \to 8 \to 1$ that returns us to the beginning. We can choose a different outgoing edge in node 8, which results in the path  $1 \to 6 \to 2 \to 8 \to 3$ that cannot be continued.
+
+After a few more attempts, we will arrive to the path $1 \to 7 \to 4 \to 10 \to 5$ that solves the problem.
+
+
+
+Update coming soon ...
