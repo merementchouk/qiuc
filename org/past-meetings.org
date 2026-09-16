@@ -73,6 +73,10 @@ where $s_1 = 1$, if $r \in \mathcal{V}^{(2)}$,  and $s_1 = -1$, otherwise; and $
 
 Next, let $\boldsymbol{\sigma}'$ be such spin configuration that $Q(r; \boldsymbol{\sigma}') = 0$, for /all/ nodes $r$.
 
-Finally, we consider the set of edges of the original graph $\mathcal{T} = \lbrace m \in \mathcal{E} : \sigma_m \sigma'_m = -1\rbrace$, that is edges 
+Finally, we consider the set of edges of the original graph $\mathcal{T} = \lbrace m \in \mathcal{E} : \sigma_m \sigma'_m = -1\rbrace$, that is edges corresponding to spins that were inverted in order to obtain $Q(r; \boldsymbol{\sigma}') = 0$. Then \(\mathcal{T}\) contains the directed path connecting the start and end points, possibly with directed cycles. Traversing this set and eliminating encountered cycles produces the desired path.
+
+*** Why this representation works
+
+Let's consider, for concreteness, \(r \in \mathcal{V}^{(1)}\). 
 
 More coming soon ...
