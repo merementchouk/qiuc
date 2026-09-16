@@ -54,7 +54,7 @@ $$
 \boldsymbol{\sigma} = \left\{ -1, -1, 1, 1, -1, 1, 1, 1, 1, -1, -1, -1, 1 \right\} , 
 $$
 
-where \[\boldsymbol{\sigma} = \left\{ \sigma_1, \ldots, \sigma_{M} \right\}\] denotes the whole collection of the spin variables.
+where $\boldsymbol{\sigma} = \left\{ \sigma_1, \ldots, \sigma_{M} \right\}$ denotes the whole collection of the spin variables.
 
 For node $r \in 1, \ldots, N$, we define a charge
 
@@ -70,5 +70,7 @@ Q(r; \boldsymbol{\sigma}) =
 0, & \qquad \text{if $r$ is not a path terminal point} \\
 \pm 2, & \qquad \text{if $r$ is a path terminal point}\end{cases}
 $$
+
+
 
 More coming soon ...

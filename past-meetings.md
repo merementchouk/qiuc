@@ -51,7 +51,7 @@ We represent edges of the original graph by spin (binary) variables, $\sigma_m \
 
 $$ \boldsymbol{\sigma} = \left\{ -1, -1, 1, 1, -1, 1, 1, 1, 1, -1, -1, -1, 1 \right\} , $$
 
-where $$\boldsymbol{\sigma} = \left\{ \sigma_1, \ldots, \sigma_{M} \right\}$$ denotes the whole collection of the spin variables.
+where $\boldsymbol{\sigma} = \left\{ \sigma_1, \ldots, \sigma_{M} \right\}$ denotes the whole collection of the spin variables.
 
 For node $r \in 1, \ldots, N$, we define a charge
 
