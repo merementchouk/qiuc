@@ -67,6 +67,8 @@ $$\mathrm{sign}[Q(r; \boldsymbol{\sigma})] = s_1 s_2,$$
 
 where $s_1 = 1$, if $r \in \mathcal{V}^{(2)}$, and $s_1 = -1$, otherwise; and $s_2 = 1$, if $r$ is the starting point, and $s_2 = -1$, otherwise.
 
+For example, for the graph shown above all $Q(r; \boldsymbol{\sigma}) = 0$, except for $Q(1; \boldsymbol{\sigma}) = -2$ and $Q(5; \boldsymbol{\sigma}) = 2$.
+
 Next, let $\boldsymbol{\sigma}'$ be such spin configuration that $Q(r; \boldsymbol{\sigma}') = 0$, for *all* nodes $r$.
 
 Finally, we consider the set of edges of the original graph $\mathcal{T} = \lbrace m \in \mathcal{E} : \sigma_m \sigma'_m = -1\rbrace$, that is edges corresponding to spins that were inverted in order to obtain $Q(r; \boldsymbol{\sigma}') = 0$. Then $\mathcal{T}$ contains the directed path connecting the start and end points, possibly with directed cycles. Traversing this set and eliminating encountered cycles produces the desired path.
@@ -74,6 +76,8 @@ Finally, we consider the set of edges of the original graph $\mathcal{T} = \lbra
 
 ### Why this representation works
 
-Let's consider, for concreteness, $r \in \mathcal{V}^{(1)}$.
+Let's consider, for concreteness, $r \in \mathcal{V}^{(1)}$. The first term in $Q(r; \boldsymbol{\sigma})$ is the number of edges entering $r$ minus the number of edges exiting $r$. Thus, inverting an edge incident to $r$ decreases $Q(r)$ by twice the direction of the edge as encoded by the respective spin variable.
+
+For example, if we invert edge $1$ in the graph shown above, then $Q(1)$ will increase by $2$.
 
 More coming soon &#x2026;
