@@ -65,6 +65,10 @@ For the terminal points, the sign of $Q(r; \boldsymbol{\sigma})$ is chosen as fo
 
 $$\mathrm{sign}[Q(r; \boldsymbol{\sigma})] = s_1 s_2,$$
 
-where $s_1 = 1$, if $r \in \mathcal{V}^{(2)}$, and $s_1 = -1$, otherwise.
+where $s_1 = 1$, if $r \in \mathcal{V}^{(2)}$, and $s_1 = -1$, otherwise; and $s_2 = 1$, if $r$ is the starting point, and $s_2 = -1$, otherwise.
+
+Next, let $\boldsymbol{\sigma}'$ be such spin configuration that $Q(r; \boldsymbol{\sigma}') = 0$, for *all* nodes $r$.
+
+Finally, we consider the set of edges of the original graph $\mathcal{T} = \lbrace m \in \mathcal{E} : \sigma_m \sigma'_m = -1\rbrace$, that is edges
 
 More coming soon &#x2026;
