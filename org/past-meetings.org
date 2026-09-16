@@ -44,7 +44,7 @@ One such search may result in the path $1 \to 6 \to 2 \to 8 \to 1$ that returns 
 
 After a few more attempts, we will arrive to the path $1 \to 7 \to 4 \to 10 \to 5$ that solves the problem.
 
-*** Spin algorithm
+*** Spin algorithm/representation
 
 We can represent the path finding problem in a completely different manner. This representation may appear as coming from nowhere, and this is on purpose: the objective is to demonstrate how unusual may look algorithms emerging within different areas of unconventional computing. Later, we will see how this representation may be derived as branching out from studying a different problem (discrete tomography). 
 
@@ -81,8 +81,24 @@ Finally, we consider the set of edges of the original graph $\mathcal{T} = \lbra
 
 Let's consider, for concreteness, \(r \in \mathcal{V}^{(1)}\). The first term in \(Q(r; \boldsymbol{\sigma})\) is the number of edges entering $r$ minus the number of edges exiting $r$. Thus, inverting an edge incident to $r$ decreases $Q(r)$ by twice the direction of the edge as encoded by the respective spin variable.
 
-For example, if we invert edge $1$ in the graph shown above, then $Q(1)$ will increase by $2$.
+For example, if we invert edge $1$ in the graph shown above, then $Q(1)$ will increase by $2$. Notice, that after that $Q(1; \boldsymbol{\sigma}') = 0$, but now $Q(6; \boldsymbol{\sigma}') = 2$. In order to restore $Q(6) = 0$, we need to invert $\sigma_3$ and so on. This shows how directed paths may emerge in this representation.
 
+It can be seen that inverting spins along a directed cycle does not change the charge, $Q(r; \boldsymbol{\sigma}') = Q(r; \boldsymbol{\sigma})$, in all nodes along the cycle. Thus, to turn to zero charges at two given points, there should be a directed path that starts at one point and terminates at another.
 
+*** Is this really an algorithm?
 
-More coming soon ...
+The spin representation may be regarded as a formulation of the path finding problem within the [[https://en.wikipedia.org/wiki/Constraint_programming][constraint programming]]. We set a problem, imposed the constraint, \(Q(r; \boldsymbol{\sigma}') = 0\) for all $r$, and once the constraint is met, we read out the solution. But how do we ensure the constraint? How do we find such spin configuration \(\boldsymbol{\sigma}'\) that turns all the charges to zero? Don't we need to go back to BFS and DFS or other rather /conventional/ algorithms?
+
+*** Ising machines
+
+It turns out we can approach the problem of satisfying various kinds of constraints from a completely different unifying perspective. The problem of finding spin configuration annihilating all the charges can be posed as a problem about finding a minimum of
+
+\[
+H(\boldsymbol{\sigma}) = \frac{1}{4} \sum_{r} Q^2(r; \boldsymbol{\sigma}),
+\]
+
+a Hamiltonian of an Ising model on a specially constructed weighted graph. This brings the notion of Ising machines into the context.
+
+We will go into more detail later, and, in particular, we will see that the sole fact that we rewrote a problem in an Ising form does not really answer the question "How do we solve /this/ problem?" However, we will see that a further reformulation of the problem for a continuous relaxation of binary spins and making the system of relaxed spins evolving driven by specially selected dynamical model does move us quite far ahead in answering the question "How do we solve /this/ problem?"
+
+In view of such specialized Ising machines, we indeed have *unconventional computing* with unconventional algorithms that goes beyond disguising standard algorithms.
