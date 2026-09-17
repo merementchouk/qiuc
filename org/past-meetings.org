@@ -16,4 +16,4 @@ He explained how the algorithm encodes problem data in a novel way using binary 
 
 Mikhail announced plans to explore additional algorithms and computing models in future meetings, including the V-2 model of relaxation-based dynamical Ising machines and other unconventional computing approaches. He also raised the question of recognizing computation in physical systems.
 
-Additional details can be found [[/topics/2026-09-14-dipath.html][here]].
+Additional details can be found [[./topics/2026-09-14-dipath.html][here]].
