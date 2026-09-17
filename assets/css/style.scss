@@ -12,3 +12,23 @@ body {
 h1, h2, h3, h4, h5, h6 {
   color: #003366;
 }
+
+a:link {
+  color: #1163d8; /* Custom blue */
+  text-decoration: underline;
+}
+
+/* 2. Visited link */
+a:visited {
+  color: #601e88; /* Custom purple */
+}
+
+/* 3. Hover state (mouse pointer over it) */
+a:hover {
+  color: #0d47a1; 
+}
+
+/* 4. Active state (the moment it is clicked) */
+a:active {
+  color: #d93025; /* Custom red */
+}

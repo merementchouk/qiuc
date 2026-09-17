@@ -1,1 +1,30 @@
+# ----------------------------------------
+# Jekyll Build Output & Metadata
+# ----------------------------------------
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# ----------------------------------------
+# Ruby / Bundler (if testing locally)
+# ----------------------------------------
+.bundle/
+vendor/bundle/
+Gemfile.lock
+
+# ----------------------------------------
+# Emacs Artifacts
+# ----------------------------------------
+*~
+\#*\#
+.#*
+auto-save-list/
 /org/ltximg
+
+# ----------------------------------------
+# OS & Editor Artifacts
+# ----------------------------------------
+.DS_Store
+Thumbs.db
+
