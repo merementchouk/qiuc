@@ -5,6 +5,7 @@ Here are quick recaps (AI-seeded and edited) and links to additional materials f
 
 1.  [2026-09-14 Mon](#org6a31fae)
 2.  [2026-09-21 Mon](#org41b27ac)
+3.  [2026-09-28 Mon](#orga799f53)
 
 
 <a id="org6a31fae"></a>
@@ -39,3 +40,16 @@ As an example of a potential backend for solving the $Q(\boldsymbol{\sigma}) = 0
 The session concluded by emphasizing that unconventional computing involves understanding different physical systems' computational capabilities and applying them to solve complex problems.
 
 Additional details can be found [here](./topics/2026-09-21-v2-intro.html).
+
+
+<a id="orga799f53"></a>
+
+# 2026-09-28 Mon
+
+At the meeting, one of quantum-inspired motives was elaborated by presenting the concept of adiabatic quantum computing (AQC). On the surface, the adiabatic quantum computing pursues the same objective: finding a ground state of a spin Hamiltonian representing a problem. However, AQC follows a particular interesting idea based on a slow transition from a simple Hamiltonian to a complex one to find ground states.
+
+We overviewed [the quantum adiabatic theorem](https://en.wikipedia.org/wiki/Adiabatic_theorem) and energy-time uncertainty relations, defining the theoretical foundations of AQC, while outlining practical limitations, particularly the [challenge](https://arxiv.org/abs/quant-ph/0509162) of maintaining sufficient energy gaps during the transition process. While it is [possible](https://arxiv.org/abs/1104.2349) to design such a transition from a simple to complex Hamiltonians that preserves sufficiently wide gaps, finding such a transition might be a [challenge of its own](https://quantum-journal.org/papers/q-2025-07-11-1790/).
+
+The broader lesson for quantum-inspired unconventional computing is the value of solving a difficult problem through a gradual transition from a simple, well-understood system to the desired complex one. Implementing this strategy, however, requires designing a transition path that remains stable and computationally tractable throughout.
+
+Additional details can be found [here](./topics/2026-09-28-aqc-intro.html).

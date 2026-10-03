@@ -18,6 +18,7 @@ Mikhail announced plans to explore additional algorithms and computing models in
 
 Additional details can be found [[./topics/2026-09-14-dipath.html][here]].
 
+
 * 2026-09-21 Mon
 
 The meeting focused on unconventional computing and how physical systems can be used to solve complex computational problems.
@@ -33,3 +34,13 @@ As an example of a potential backend for solving the $Q(\boldsymbol{\sigma}) = 0
 The session concluded by emphasizing that unconventional computing involves understanding different physical systems' computational capabilities and applying them to solve complex problems.
 
 Additional details can be found [[./topics/2026-09-21-v2-intro.html][here]].
+
+* 2026-09-28 Mon
+
+At the meeting, one of quantum-inspired motives was elaborated by presenting the concept of adiabatic quantum computing (AQC). On the surface, the adiabatic quantum computing pursues the same objective: finding a ground state of a spin Hamiltonian representing a problem. However, AQC follows a particular interesting idea based on a slow transition from a simple Hamiltonian to a complex one to find ground states. 
+
+We overviewed [[https://en.wikipedia.org/wiki/Adiabatic_theorem][the quantum adiabatic theorem]] and energy-time uncertainty relations, defining the theoretical foundations of AQC, while outlining  practical limitations, particularly the [[https://arxiv.org/abs/quant-ph/0509162][challenge]] of maintaining sufficient energy gaps during the transition process. While it is [[https://arxiv.org/abs/1104.2349][possible]] to design such a transition from a simple to complex Hamiltonians that preserves sufficiently wide gaps, finding such a transition might be a [[https://quantum-journal.org/papers/q-2025-07-11-1790/][challenge of its own]].
+
+The broader lesson for quantum-inspired unconventional computing is the value of solving a difficult problem through a gradual transition from a simple, well-understood system to the desired complex one. Implementing this strategy, however, requires designing a transition path that remains stable and computationally tractable throughout.
+
+Additional details can be found [[./topics/2026-09-28-aqc-intro.html][here]].
