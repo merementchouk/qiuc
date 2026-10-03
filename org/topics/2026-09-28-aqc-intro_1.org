@@ -1,9 +1,0 @@
-#+TITLE: Unconventional computing and V-2 model
-#+SUBTITLE: Meetings details and links
-#+OPTIONS: title:nil toc:nil
-
-* 2026-09-28 Mon: Quantum-inspired as in adiabatic quantum computing
-
-The PDF file with the meeting (handwritten) notes can be found [[../assets/meetings/2026-09-28/QIUC Notes 2026-09-28.pdf][here]].
-
-Coming soon ...

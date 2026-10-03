@@ -21,6 +21,7 @@ Gemfile.lock
 .#*
 auto-save-list/
 /org/ltximg
+/org/topics/ltximg
 
 # ----------------------------------------
 # OS & Editor Artifacts
