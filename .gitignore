@@ -20,8 +20,12 @@ Gemfile.lock
 \#*\#
 .#*
 auto-save-list/
-/org/ltximg
-/org/topics/ltximg
+ltximg/
+
+# ----------------------------------------
+# DrawIO Artifacts
+# ----------------------------------------
+.$*
 
 # ----------------------------------------
 # OS & Editor Artifacts

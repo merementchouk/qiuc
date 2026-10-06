@@ -3,12 +3,13 @@ Here are quick recaps (AI-seeded and edited) and links to additional materials f
 
 # Table of Contents
 
-1.  [2026-09-14 Mon](#org6a31fae)
-2.  [2026-09-21 Mon](#org41b27ac)
-3.  [2026-09-28 Mon](#orga799f53)
+1.  [2026-09-14 Mon](#orgc94dfa9)
+2.  [2026-09-21 Mon](#orgf7dce4a)
+3.  [2026-09-28 Mon](#orgfd67d01)
+4.  [2026-10-05 Mon](#orgf4ce75d)
 
 
-<a id="org6a31fae"></a>
+<a id="orgc94dfa9"></a>
 
 # 2026-09-14 Mon
 
@@ -23,7 +24,7 @@ Mikhail announced plans to explore additional algorithms and computing models in
 Additional details can be found [here](./topics/2026-09-14-dipath.html).
 
 
-<a id="org41b27ac"></a>
+<a id="orgf7dce4a"></a>
 
 # 2026-09-21 Mon
 
@@ -42,7 +43,7 @@ The session concluded by emphasizing that unconventional computing involves unde
 Additional details can be found [here](./topics/2026-09-21-v2-intro.html).
 
 
-<a id="orga799f53"></a>
+<a id="orgfd67d01"></a>
 
 # 2026-09-28 Mon
 
@@ -53,3 +54,16 @@ We overviewed [the quantum adiabatic theorem](https://en.wikipedia.org/wiki/Adia
 The broader lesson for quantum-inspired unconventional computing is the value of solving a difficult problem through a gradual transition from a simple, well-understood system to the desired complex one. Implementing this strategy, however, requires designing a transition path that remains stable and computationally tractable throughout.
 
 Additional details can be found [here](./topics/2026-09-28-aqc-intro.html).
+
+
+<a id="orgf4ce75d"></a>
+
+# 2026-10-05 Mon
+
+Previously, we saw how unconventional computing enables new algorithms and information processing techniques. Today, we focused on yet another "application": reimplementation of already known algorithms. Specifically, we looked at how an algorithm that may appear principally sequential can be recast in a parallelizable form.
+
+We looked at the local search algorithm of looking for the maximum cut graph partition. This algorithm ensures that inverting any single spin will not increase cut, and, therefore, it is also called 1-opt local search. Local search is inherently sequential because it relies on comparing the current state with a future state after a flip, which creates race conditions in parallel execution. It was demonstrated that an attempt to ignore this may lead to a non-convergent and borderline useless algorithm.
+
+At the same time, reformulating the maximum cut problem as finding a maximum of a polylinear function over a convex leads to a relaxation that can be executed dynamically. This relaxation converges to states that satisfy exactly the same requirements as the outcome of 1-opt local search. However, the dynamical algorithm is parallelizable since the progression for each node depends only on the present state of the network. This method demonstrates how seemingly non-parallelizable algorithms can be reformulated to allow parallel execution.
+
+Additional details can be found [here](./topics/2026-10-05-ls-parallel.html).
