@@ -39,41 +39,43 @@ Local search is a general purpose algorithm for heuristical solving optimization
 
 Local search work as follows. Given the spin configuration $\boldsymbol{\sigma}$, we look for such a spin that could be inverted and improve cut. Say, we are looking at the node $l$. We consider
 
-$$ \Delta C_l(\boldsymbol{\sigma}) = C(\boldsymbol{\sigma} \vert_{\sigma_l \to -\sigma_l}) - C(\boldsymbol{\sigma}), $$
+$$ \delta C_l(\boldsymbol{\sigma}) = C(\boldsymbol{\sigma} \vert_{\sigma_l \to -\sigma_l}) - C(\boldsymbol{\sigma}), $$
 
-where $\boldsymbol{\sigma} \vert_{\sigma_l \to -\sigma_l}$ denotes the configuration obtained after inverting $\sigma_l$.
+where $\boldsymbol{\sigma} \vert_{\sigma_l \to -\sigma_l}$ denotes the configuration obtained after inverting $\sigma_l$. In other words, $\delta C_l(\boldsymbol{\sigma})$ has the meaning of how cut changes after inverting spin $\sigma_l$. After some algebra, we obtain
 
-If there are no such spins, we are done.
+$$ \delta C_l(\boldsymbol{\sigma}) = \sum_{n} A_{l,n} \sigma_l \sigma_n, $$
 
-Local search is inherently sequential because it relies on comparing the current state with a future state after a flip, which creates race conditions in parallel execution.
+or $\delta C_l(\boldsymbol{\sigma}) = W_{l}(\mathrm{uncut}) - W_{l}(\mathrm{cut})$, that is the difference between the total weight of uncut and cut edges incident to node $l$.
 
-the algorithm is sequential because it requires processing spins one at a time to avoid race conditions, particularly when evaluating the effects of flipping spins.
+If $\delta C_l(\boldsymbol{\sigma}) > 0$, we modify the configuration $\sigma_l \to -\sigma_l$, and return to checking now updated configuration.
 
-an example involving a triangle structure where processing nodes in parallel would lead to incorrect results due to the race condition.
+If there are no nodes with $\delta C_l(\boldsymbol{\sigma}) > 0$, we are done.
+
+As a self-check question: it is not difficult to see that starting from an arbitrary (think random) spin configuration, local search completes in a finite number of steps.
+
+The outcome of local search is such partition that for each node the total weight of incident cut edges is not smaller than that of uncut. Alternatively, we can understand this as a spin configuration that cannot be improved by inverting any single spin, or as a configuration that does not have a better one within the Hamming distance one (hence, 1-opt). The property $\delta C_l(\boldsymbol{\sigma}) \leq 0$ for all $l$ of the final configuration can be regarded as the *stability* condition of the spin configuration with respect to 1-opt local search.
+
+It is not difficult to see that trying to run the local search procedure simultaneously for multiple nodes may not necessarily lead to cut improvements. As the figure below demonstrates, this may even make the algorithm non-convergent.
 
 ![img](../assets/meetings/2026-10-05/C3-bad-ls.png "Fully asynchronous local search procedures ran at each node may easily lead to meaningless transformations")
-
-while there are potential parallelization techniques for non-overlapping graph sections, the fundamental nature of the algorithm requires sequential execution.
 
 
 ## Cube relaxation of the spin model
 
-xi m that change within the interval from -1 to 1 instead of using sigma m.
+It turns out, however, that we *can* perform local search in a parallel. More precisely, we can reproduce the results of local search within a parallelizable approach.
 
-replacing sigma with xi m preserves the maximum cut, which might look counterintuitive but is possible because psi m is a fully linear function.
+To this end, we consider a simple relaxation of the maximum cut problem by rewriting the cut function for continuous variables changing over the *interval* $[-1, 1]$:
 
-At the same time, reformulating the maximum cut problem as finding a maximum of a polylinear function over a convex leads to a relaxation that can be executed dynamically. This relaxation converges to states that satisfy exactly the same requirements as the outcome of 1-opt local search. However, the dynamical algorithm is parallelizable since the progression for each node depends only on the present state of the network. This method demonstrates how seemingly non-parallelizable algorithms can be reformulated to allow parallel execution.
+$$ C(\boldsymbol{\sigma}) \to C(\boldsymbol{\xi}) = \frac{1}{4} \sum_{m,n} A_{m,n} \left( 1 - \xi_m \xi_n \right), $$
 
-Second Derivative and Linear Functions
+where $\xi_m \in [-1, 1]$.
 
-the second derivative vanishes and therefore we with respect to any single xi the function is linear
+Enforcing the condition $A_{m,m} = 0$ (for binary spins this was not necessary as these terms do not contribute), we observe that $C(\boldsymbol{\sigma})$ is a poly-linear (multi-affine) function of $\xi_m$. Being maximized over the cube $[-1,1]^N$, it reaches its maxima at the extreme points of the body, the cube's vertices.
 
-fully linear functions within an interval do not reach maximum values within the interval, only at the endpoints.
-
-a three-dimensional cube where binary states are vertices, and explained that linear functions can only achieve maximum and minimum values at the sides of the cube.
+It can be seen by assuming that the maximum is reached elsewhere, so that not all $\xi_m = \pm 1$, considering one of such "in-between" $\xi_l$ and applying the condition $\partial^2 C(\boldsymbol{\xi}) / \partial \xi_l^2 = 0$. It should be noted that if the maximum is indeed reached at some $-1 < \xi_l < 1$, this implies that the maximum value does not depend on $\xi_l$ and we can freely choose it either $1$ or $-1$.
 
 
-## Convex Cube Maximum Value Problem
+## Dynamical realization
 
 gradient descent could be used to find these maximum values.
 
@@ -83,6 +85,8 @@ considering perturbations in the form of differences between two functions.
 ## Parallelization:  Dynamics vs Decision
 
 reformulating an algorithm as a dynamical system can make it parallelizable,
+
+Local search is inherently sequential because it relies on comparing the current state with a future state after a flip, which creates race conditions in parallel execution.
 
 this approach could potentially parallelize other algorithms that were previously considered not parallelizable, though more work is needed to apply this principle to other optimization problems.
 
