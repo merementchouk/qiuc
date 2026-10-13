@@ -1,0 +1,15 @@
+#+title: Adiabatic Quantum Computing: Details
+#+subtitle: Meetings details and links
+#+date: 2026-10-05
+#+OPTIONS: title:nil toc:nil
+
+* 2026-10-12 Mon: Local searches and max-cut challenge (WIP)
+
+The PDF file with the meeting (handwritten) notes can be found [[../assets/meetings/2026-10-12/QIUC Notes 2026-10-12.pdf][here]].
+
+#+NAME: fig:ls-failure
+#+CAPTION: Bottleneck state for a local search in a bipartite graph
+[[../assets/meetings/2026-10-12/max-cut-ls-failure.png]]
+
+
+Details coming soon ...

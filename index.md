@@ -7,13 +7,16 @@ Possible topics include constraint-based computation, analog and dynamical syste
 The group does not begin with a settled definition of unconventional computation. Our purpose is precisely to find out better language and criteria for asking what does the computational work, what resources are being exploited, and whether a proposed departure from conventional computing is substantive or merely descriptive.
 
 
-# Upcoming Schedule
+# Past Meetings and Upcoming Schedule
 
-| Date   | Speaker | Topic                              |
-|------ |------- |---------------------------------- |
-| Sep 14 | ME      | Overall scope and Ising computing  |
-| Sep 21 | ME      | More spin algorithms and V-2 model |
-|        |         |                                    |
+| Date   | Speaker | Topic                                  |
+|------ |------- |-------------------------------------- |
+| Sep 14 | ME      | Overall scope and Ising computing      |
+| Sep 21 | ME      | More spin algorithms and V-2 model     |
+| Sep 28 | ME      | Adiabatic Quantum Computing            |
+| Oct 05 | ME      | Parallelized local search              |
+| Oct 12 | ME      | Local searches and simulated annealing |
+|        |         |                                        |
 
 
 # Joining the discussions

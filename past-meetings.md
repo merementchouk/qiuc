@@ -3,15 +3,16 @@ Here are quick recaps (AI-seeded and edited) and links to additional materials f
 
 # Table of Contents
 
-1.  [2026-09-14 Mon](#orgc94dfa9)
-2.  [2026-09-21 Mon](#orgf7dce4a)
-3.  [2026-09-28 Mon](#orgfd67d01)
-4.  [2026-10-05 Mon](#orgf4ce75d)
+1.  [2026-09-14 Mon: Overall scope and Ising computing](#org72ef66f)
+2.  [2026-09-21 Mon: More spin algorithms and V-2 model](#org5245c81)
+3.  [2026-09-28 Mon: Adiabatic Quantum Computing](#org85a6cc7)
+4.  [2026-10-05 Mon: Parallelized local search](#org54071bb)
+5.  [2026-10-12 Mon: Local searches and simulated annealing](#org245f6fc)
 
 
-<a id="orgc94dfa9"></a>
+<a id="org72ef66f"></a>
 
-# 2026-09-14 Mon
+# 2026-09-14 Mon: Overall scope and Ising computing
 
 Mikhail presented an introduction to unconventional computing by considering a problem of finding paths in bipartite directed graphs, given that such paths exist.
 
@@ -24,9 +25,9 @@ Mikhail announced plans to explore additional algorithms and computing models in
 Additional details can be found [here](./topics/2026-09-14-dipath.html).
 
 
-<a id="orgf7dce4a"></a>
+<a id="org5245c81"></a>
 
-# 2026-09-21 Mon
+# 2026-09-21 Mon: More spin algorithms and V-2 model
 
 The meeting focused on unconventional computing and how physical systems can be used to solve complex computational problems.
 
@@ -43,9 +44,9 @@ The session concluded by emphasizing that unconventional computing involves unde
 Additional details can be found [here](./topics/2026-09-21-v2-intro.html).
 
 
-<a id="orgfd67d01"></a>
+<a id="org85a6cc7"></a>
 
-# 2026-09-28 Mon
+# 2026-09-28 Mon: Adiabatic Quantum Computing
 
 At the meeting, one of quantum-inspired motives was elaborated by presenting the concept of adiabatic quantum computing (AQC). On the surface, the adiabatic quantum computing pursues the same objective: finding a ground state of a spin Hamiltonian representing a problem. However, AQC follows a particular interesting idea based on a slow transition from a simple Hamiltonian to a complex one to find ground states.
 
@@ -56,9 +57,9 @@ The broader lesson for quantum-inspired unconventional computing is the value of
 Additional details can be found [here](./topics/2026-09-28-aqc-intro.html).
 
 
-<a id="orgf4ce75d"></a>
+<a id="org54071bb"></a>
 
-# 2026-10-05 Mon
+# 2026-10-05 Mon: Parallelized local search
 
 Previously, we saw how unconventional computing enables new algorithms and information processing techniques. Today, we focused on yet another "application": reimplementation of already known algorithms. Specifically, we looked at how an algorithm that may appear principally sequential can be recast in a parallelizable form.
 
@@ -67,3 +68,14 @@ We looked at the local search algorithm of looking for the maximum cut graph par
 At the same time, reformulating the maximum cut problem as finding a maximum of a polylinear function over a convex leads to a relaxation that can be executed dynamically. This relaxation converges to states that satisfy exactly the same requirements as the outcome of 1-opt local search. However, the dynamical algorithm is parallelizable since the progression for each node depends only on the present state of the network. This method demonstrates how seemingly non-parallelizable algorithms can be reformulated to allow parallel execution.
 
 Additional details can be found [here](./topics/2026-10-05-ls-parallel.html).
+
+
+<a id="org245f6fc"></a>
+
+# 2026-10-12 Mon: Local searches and simulated annealing
+
+The meeting focused on a broad family of local search algorithms and their limitations from the perspective of the max-cut problem. Examples of "objectively" trivial but potentially challenging for local search algorithms were presented. A typical feature of these examples is that they suggest expanding the Hamming neighborhood covered by the algorithm. In other words, these challenges are resolved by advancing $k$ in $k$-opt. However, this comes with a hefty performance penalty, as Hamming neighborhoods grow exponentially. At the meeting, the simulated annealing algorithm was introduced as an ingenious compromise between the tunnel vision of local searches and the quick growth of the search space.
+
+A brief overview of the fundamental challenges faced by search algorithms was given. The max-cut problem is APX-hard; that is, it is hard to find an approximation beyond a certain threshold. This is a major constraint to keep in mind when approaching algorithms and techniques with too broad a scope. At the same time, this should guide us to focus on particular classes of problems rather than discourage us from using such techniques. After all, approaching an array sorting problem as a search in the space of its possible permutations also looks quite intimidating.
+
+Additional details can be found [here](./topics/2026-10-12-ls-sa-maxcut.html).
