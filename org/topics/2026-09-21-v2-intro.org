@@ -115,7 +115,7 @@ Different relaxations (different models driving R-DIMs) are defined by kernels \
 
 ** V-2 model
 
-Among various R-DIMs, we will focus on the V-2 model. It is defined by \(\Phi(X) = |X| / 2\), so that the equations of motion governing the evolution of the relaxed spin, \(\dot{\mathbf{X}} = - 2 \nabla_{\mathbf{X}} H(\boldsymbol{\psi})\), have the form
+Among various R-DIMs, we will focus on the V-2 model. It is defined by \(\Phi(X) = \vert X \vert / 2\), so that the equations of motion governing the evolution of the relaxed spin, \(\dot{\mathbf{X}} = - 2 \nabla_ {\mathbf{X}} H(\boldsymbol{\psi})\), have the form
 
 \[
 \dot{X}_m = \sigma_m \sum_{n} \sigma_n \, \mathrm{sgn} (X_m - X_n),
