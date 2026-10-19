@@ -77,7 +77,13 @@ It can be seen by assuming that the maximum is reached elsewhere, so that not al
 
 ## Dynamical realization
 
-gradient descent could be used to find these maximum values.
+The continuous relaxation of the cut function $C(\boldsymbol{\xi})$ can be interpreted as a Lyapunov function defining the evolution of a dynamical system according to
+
+$$ \dot{\xi}_m = \frac{\partial C(\boldsymbol{\sigma})}{\partial \xi_m}$$
+
+This corresponds to finding the maximum of the relaxed cut function using the gradient descent method.
+
+The time dependence of the state vector $\boldsymbol{\xi}(t)$ is rather complex, and, as we will see the next time, the terminal state strongly depends on the initial condition.
 
 considering perturbations in the form of differences between two functions.
 
