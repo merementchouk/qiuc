@@ -64,3 +64,7 @@ The meeting focused on a broad family of local search algorithms and their limit
 A brief overview of the fundamental challenges faced by search algorithms was given. The max-cut problem is APX-hard; that is, it is hard to find an approximation beyond a certain threshold. This is a major constraint to keep in mind when approaching algorithms and techniques with too broad a scope. At the same time, this should guide us to focus on particular classes of problems rather than discourage us from using such techniques. After all, approaching an array sorting problem as a search in the space of its possible permutations also looks quite intimidating.
 
 Additional details can be found [[./topics/2026-10-12-ls-sa-maxcut.html][here]].
+
+* 2026-10-19 Mon: General discussion of unconventional computing
+
+A freeform discussion of unconventional computing: potential implications of multiple solutions in developing new pipelines, problems with adopting quantum algorithms, the difficulty of comparing classical and quantum oracle models, potential implications of inherently isotropic phase space of R-DIMs, challenges of communicating complex scientific ideas, techniques of involving LLM-based AI to research activities. 

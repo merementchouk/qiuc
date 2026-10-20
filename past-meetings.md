@@ -3,14 +3,15 @@ Here are quick recaps (AI-seeded and edited) and links to additional materials f
 
 # Table of Contents
 
-1.  [2026-09-14 Mon: Overall scope and Ising computing](#org72ef66f)
-2.  [2026-09-21 Mon: More spin algorithms and V-2 model](#org5245c81)
-3.  [2026-09-28 Mon: Adiabatic Quantum Computing](#org85a6cc7)
-4.  [2026-10-05 Mon: Parallelized local search](#org54071bb)
-5.  [2026-10-12 Mon: Local searches and simulated annealing](#org245f6fc)
+1.  [2026-09-14 Mon: Overall scope and Ising computing](#org4bf2f8a)
+2.  [2026-09-21 Mon: More spin algorithms and V-2 model](#org38136d6)
+3.  [2026-09-28 Mon: Adiabatic Quantum Computing](#orgb0e0baa)
+4.  [2026-10-05 Mon: Parallelized local search](#org4fa4c20)
+5.  [2026-10-12 Mon: Local searches and simulated annealing](#orgcabf760)
+6.  [2026-10-19 Mon: General discussion of unconventional computing](#org3f83a6e)
 
 
-<a id="org72ef66f"></a>
+<a id="org4bf2f8a"></a>
 
 # 2026-09-14 Mon: Overall scope and Ising computing
 
@@ -25,7 +26,7 @@ Mikhail announced plans to explore additional algorithms and computing models in
 Additional details can be found [here](./topics/2026-09-14-dipath.html).
 
 
-<a id="org5245c81"></a>
+<a id="org38136d6"></a>
 
 # 2026-09-21 Mon: More spin algorithms and V-2 model
 
@@ -44,7 +45,7 @@ The session concluded by emphasizing that unconventional computing involves unde
 Additional details can be found [here](./topics/2026-09-21-v2-intro.html).
 
 
-<a id="org85a6cc7"></a>
+<a id="orgb0e0baa"></a>
 
 # 2026-09-28 Mon: Adiabatic Quantum Computing
 
@@ -57,7 +58,7 @@ The broader lesson for quantum-inspired unconventional computing is the value of
 Additional details can be found [here](./topics/2026-09-28-aqc-intro.html).
 
 
-<a id="org54071bb"></a>
+<a id="org4fa4c20"></a>
 
 # 2026-10-05 Mon: Parallelized local search
 
@@ -70,7 +71,7 @@ At the same time, reformulating the maximum cut problem as finding a maximum of 
 Additional details can be found [here](./topics/2026-10-05-ls-parallel.html).
 
 
-<a id="org245f6fc"></a>
+<a id="orgcabf760"></a>
 
 # 2026-10-12 Mon: Local searches and simulated annealing
 
@@ -79,3 +80,10 @@ The meeting focused on a broad family of local search algorithms and their limit
 A brief overview of the fundamental challenges faced by search algorithms was given. The max-cut problem is APX-hard; that is, it is hard to find an approximation beyond a certain threshold. This is a major constraint to keep in mind when approaching algorithms and techniques with too broad a scope. At the same time, this should guide us to focus on particular classes of problems rather than discourage us from using such techniques. After all, approaching an array sorting problem as a search in the space of its possible permutations also looks quite intimidating.
 
 Additional details can be found [here](./topics/2026-10-12-ls-sa-maxcut.html).
+
+
+<a id="org3f83a6e"></a>
+
+# 2026-10-19 Mon: General discussion of unconventional computing
+
+A freeform discussion of unconventional computing: potential implications of multiple solutions in developing new pipelines, problems with adopting quantum algorithms, the difficulty of comparing classical and quantum oracle models, potential implications of inherently isotropic phase space of R-DIMs, challenges of communicating complex scientific ideas, techniques of involving LLM-based AI to research activities.

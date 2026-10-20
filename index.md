@@ -16,6 +16,8 @@ The group does not begin with a settled definition of unconventional computation
 | Sep 28 | ME      | Adiabatic Quantum Computing            |
 | Oct 05 | ME      | Parallelized local search              |
 | Oct 12 | ME      | Local searches and simulated annealing |
+| Oct 19 |         | Freeform discussion of UC              |
+| Oct 26 | ME      | Dynamical properties of the V-2 model  |
 |        |         |                                        |
 
 
