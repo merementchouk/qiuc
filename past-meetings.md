@@ -3,15 +3,16 @@ Here are quick recaps (AI-seeded and edited) and links to additional materials f
 
 # Table of Contents
 
-1.  [2026-09-14 Mon: Overall scope and Ising computing](#org4bf2f8a)
-2.  [2026-09-21 Mon: More spin algorithms and V-2 model](#org38136d6)
-3.  [2026-09-28 Mon: Adiabatic Quantum Computing](#orgb0e0baa)
-4.  [2026-10-05 Mon: Parallelized local search](#org4fa4c20)
-5.  [2026-10-12 Mon: Local searches and simulated annealing](#orgcabf760)
-6.  [2026-10-19 Mon: General discussion of unconventional computing](#org3f83a6e)
+1.  [2026-09-14 Mon: Overall scope and Ising computing](#orge5cd5a7)
+2.  [2026-09-21 Mon: More spin algorithms and V-2 model](#org278c8b3)
+3.  [2026-09-28 Mon: Adiabatic Quantum Computing](#org63602d0)
+4.  [2026-10-05 Mon: Parallelized local search](#org566860b)
+5.  [2026-10-12 Mon: Local searches and simulated annealing](#org023a6a0)
+6.  [2026-10-19 Mon: General discussion of unconventional computing](#org4cf1ea0)
+7.  [2026-10-26 Mon: R-DIMs and V-2 model](#org2594bdd)
 
 
-<a id="org4bf2f8a"></a>
+<a id="orge5cd5a7"></a>
 
 # 2026-09-14 Mon: Overall scope and Ising computing
 
@@ -26,7 +27,7 @@ Mikhail announced plans to explore additional algorithms and computing models in
 Additional details can be found [here](./topics/2026-09-14-dipath.html).
 
 
-<a id="org38136d6"></a>
+<a id="org278c8b3"></a>
 
 # 2026-09-21 Mon: More spin algorithms and V-2 model
 
@@ -45,7 +46,7 @@ The session concluded by emphasizing that unconventional computing involves unde
 Additional details can be found [here](./topics/2026-09-21-v2-intro.html).
 
 
-<a id="orgb0e0baa"></a>
+<a id="org63602d0"></a>
 
 # 2026-09-28 Mon: Adiabatic Quantum Computing
 
@@ -58,7 +59,7 @@ The broader lesson for quantum-inspired unconventional computing is the value of
 Additional details can be found [here](./topics/2026-09-28-aqc-intro.html).
 
 
-<a id="org4fa4c20"></a>
+<a id="org566860b"></a>
 
 # 2026-10-05 Mon: Parallelized local search
 
@@ -71,7 +72,7 @@ At the same time, reformulating the maximum cut problem as finding a maximum of 
 Additional details can be found [here](./topics/2026-10-05-ls-parallel.html).
 
 
-<a id="orgcabf760"></a>
+<a id="org023a6a0"></a>
 
 # 2026-10-12 Mon: Local searches and simulated annealing
 
@@ -82,8 +83,17 @@ A brief overview of the fundamental challenges faced by search algorithms was gi
 Additional details can be found [here](./topics/2026-10-12-ls-sa-maxcut.html).
 
 
-<a id="org3f83a6e"></a>
+<a id="org4cf1ea0"></a>
 
 # 2026-10-19 Mon: General discussion of unconventional computing
 
 A freeform discussion of unconventional computing: potential implications of multiple solutions in developing new pipelines, problems with adopting quantum algorithms, the difficulty of comparing classical and quantum oracle models, potential implications of inherently isotropic phase space of R-DIMs, challenges of communicating complex scientific ideas, techniques of involving LLM-based AI to research activities.
+
+
+<a id="org2594bdd"></a>
+
+# 2026-10-26 Mon: R-DIMs and V-2 model
+
+First, we overviewed the general challenge faced by typical local search algorithms. They are prone to ending up in configurations that do not yield the ground state (maximum cut partition), but cannot be improved within the set of neighboring spin configurations within the bounded Hamming distance. In particular, this means that it may be hard for local search algorithms to implement the spin version of the algorithm finding a path in bipartite directed graph. It is, therefore, important that an R-DIM driven by the V-2 model performs a search that is not Hamming-distance bounded. This meeting starts a few-step exploration of the dynamical properties of the V-2 model and its computational capabilities.
+
+Additional details can be found [here](./topics/2026-10-26-v2-1.html).

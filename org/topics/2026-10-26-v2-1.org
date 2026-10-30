@@ -1,0 +1,62 @@
+#+title: V-2 model I
+#+subtitle: Meetings details and links
+#+date: 2026-10-26
+#+OPTIONS: title:nil toc:nil
+
+* 2026-10-26 Mon: V-2 model prerequisites
+
+The PDF file with the meeting (handwritten) notes can be found [[../assets/meetings/2026-10-12/QIUC Notes 2026-10-12.pdf][here]].
+
+** Motivation
+
+We saw that spin-based computing treats data-processing tasks in its own, quite distinctive way. Some tasks that may require elaborate conventional algorithms have surprisingly simple form, for example, finding such spin configurations \(\boldsymbol{\sigma}\) that deliver minimum of \(Q^2(\boldsymbol{\sigma})\), where \(Q(\boldsymbol{\sigma})\) is not a particularly complex function.
+
+At the same time, we saw that finding such a minimum is not a simple task either. We looked at a family of local search algorithms (\(k\)-opt local search) guaranteeing that there are no better configurations within Hamming distance \(k\) and came to a rather discouraging conclusion. While the complexity of these algorithms grows exponentially with \(k\), they are still prone to ending up in a local trap: the state is an algorithm's stable state but does not yield minimum of \(Q^2(\boldsymbol{\sigma})\).
+
+How common or artificial may be tasks with such traps? It is conjectured that
+[[./topics/2026-09-14-dipath.html][finding path in a bipartite directed graph]] may be hard for local search, because for any \(k\), the correcting spin transformation may require inverting more than \(k\) spins. At the same time, that same problem can be routinely solved using, say, the breadth-first search (BFS).
+
+Hamming distance-bounded search seems like a natural limitation. Does this mean that we have an inherent limitation on "native" implementations of spin-based computations?
+
+It is, therefore, important that relaxation-based dynamical Ising machines (R-DIMs), in particular the one driven by the V-2 model, are not subject to Hamming-distance bound. Implementing the spin-based path finding algorithm is not a challenge for the V-2-driven Ising machine (still a hypothesis at the time of the meeting).
+
+Considering the relative simplicity of the equations of motion governing the V-2 model, such freedom from the Hamming-distance bound appears, on the one hand, surprising and, on the other hand, illustrating the hidden computational significance of dynamical systems. Therefore, we will consider the V-2 model dynamics in detail to give a precise formulation of the unbounded search supported by the V-2 model and make it bulletproof.
+
+** Phase space of relaxed spins
+
+Within the family of relaxation-based dynamical Ising machines (R-DIMs), relaxed spins are introduced by representing binary spins of the canonical Ising model by the pair \(\psi = \left( \sigma, X \right)\), where \(\sigma \in \left\{ -1, 1 \right\}\) represents the binary spin, and \(X \in [-1, 1]\) is the continuous component of the relaxed spin.
+
+The phase space of a single relaxed spin is convenient to define as \(\mathcal{R} = \left\lbrace -1, 1 \right\rbrace \times [-1, 1] / \sim\), with the equivalence relation
+\[
+(\sigma, 1) \sim (-\sigma, -1).
+\]
+
+Geometrically, this space is illustrated by the following diagram.
+
+#+NAME: fig:rspin-spance
+#+CAPTION: Three views of the relaxed-spin phase space
+[[../assets/meetings/2026-10-26/rspin-phase.png]]
+
+** Global properties of relaxed spin functions
+
+We characterize states, relaxed spins configurations \(\boldsymbol{\psi} = \left( \psi_1, \ldots, \psi_N \right) \in \mathcal{R}^N\), by functions on states, \(\mathcal{F}(\boldsymbol{\psi})\).  Requiring that these functions are continuous on the network phase space, and, in particular, are consistent with the equivalence relation, imposes constraints on their form.
+
+We consider these constraints for the example of the R-DIM's relaxed cut function
+
+\[
+\mathcal{C}(\boldsymbol{\psi}) = \mathcal{C}(\boldsymbol{\sigma}) + \frac{1}{4} \sum_{m,n} A_{m,n} \sigma_m \sigma_n \Phi(X_m - X_n),
+\]
+
+where
+
+\[
+\mathcal{C}(\boldsymbol{\sigma}) = \frac{1}{4} \sum_{m,n} A_{m,n}\left( 1 - \sigma_m \sigma_n \right) 
+\]
+
+is the original (unrelaxed) cut function, and \(\Phi(X)\) is the relaxed cut indicator. Generally, this indicator is only required to satisfy \(\Phi(0) = 0\) and \(\Phi(\pm 2) = 1\). However, requiring continuity on \(\mathcal{R}^N\) adds an additional constraint.
+
+To derive this constraint, we consider the case when one relaxed spin, say, with number \(i \in \left\{ 1, \ldots, N \right\}\), is subject to the equivalence relation, that is \(X_i = 1\).
+
+** V-2 model
+
+Details coming soon ...
