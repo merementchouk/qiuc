@@ -54,7 +54,7 @@ Local search work as follows. Given the spin configuration \(\boldsymbol{\sigma}
 where \(\boldsymbol{\sigma} \vert_{\sigma_l \to -\sigma_l}\) denotes the configuration obtained after inverting \(\sigma_l\). In other words, \(\delta C_l(\boldsymbol{\sigma})\) has the meaning of how cut changes after inverting spin \(\sigma_l\). After some algebra, we obtain
 
 \[
-\delta C_l(\boldsymbol{\sigma}) = \sum_{n} A_{l,n} \sigma_l \sigma_n,
+\delta C_l(\boldsymbol{\sigma}) = \sigma_l \sum_{n} A_{l,n} \sigma_n,
 \]
 
 or \(\delta C_l(\boldsymbol{\sigma}) = W_{l}(\mathrm{uncut}) - W_{l}(\mathrm{cut})\), that is the difference between the total weight of uncut and cut edges incident to node \(l\).
@@ -88,21 +88,38 @@ where \(\xi_m \in [-1, 1]\).
 
 Enforcing the condition \(A_{m,m} = 0\) (for binary spins this was not necessary as these terms do not contribute), we observe that \(C(\boldsymbol{\sigma})\) is a poly-linear (multi-affine) function of \(\xi_m\). Being maximized over the cube \([-1,1]^N\), it reaches its maxima at the extreme points of the body, the cube's vertices.
 
-It can be seen by assuming that the maximum is reached elsewhere, so that not all \(\xi_m = \pm 1\), considering one of such "in-between" \(\xi_l\) and applying the condition \(\partial^2 C(\boldsymbol{\xi}) / \partial \xi_l^2 = 0\). It should be noted that if the maximum is indeed reached at some \(-1 < \xi_l < 1\), this implies that the maximum value does not depend on \(\xi_l\) and we can freely choose it either \(1\) or \(-1\).
+Indeed, suppose the maximum is reached elsewhere, so that not all \(\xi_m = \pm 1\), considering one of such "in-between" \(\xi_l\) and applying the condition \(\partial^2 C(\boldsymbol{\xi}) / \partial \xi_l^2 = 0\). It should be noted that if the maximum is indeed reached at some \(-1 < \xi_l < 1\), this implies that the maximum value does not depend on \(\xi_l\) and we can freely choose it either \(1\) or \(-1\).
 
 ** Dynamical realization
 
 The continuous relaxation of the cut function \(C(\boldsymbol{\xi})\) can be interpreted as a Lyapunov function defining the evolution of a dynamical system according to
 
-\[ \dot{\xi}_m = \frac{\partial C(\boldsymbol{\sigma})}{\partial \xi_m}\]
+\[ \dot{\xi}_m = \frac{\partial C(\boldsymbol{\sigma})}{\partial \xi_m}
+= \xi_m \sum_{n} A_{m,n} \xi_n\]
 
 This corresponds to finding the maximum of the relaxed cut function using the gradient descent method.
 
 The time dependence of the state vector \(\boldsymbol{\xi}(t)\) is rather complex, and, as we will see, the terminal state depends on the initial condition rather drastically.
 
-Luckily, we can apply the same approach as above and consider the question: what kind of terminal states we can expect.
+Luckily, we can apply the same approach as above and consider the question: what kind of terminal states we can expect, or what kind of states are stable with respect to evolution governed by the equations of motion.
 
-considering perturbations in the form of differences between two functions.
+To this end, we consider a state where all dynamical variables are at a hypercube vertex \(\xi_n^{(0)} = \sigma_n \in \lbrace -1, 1 \rbrace\). As consideration above shows, if the system reaches equilibrium at a state with some \(\xi_n\) not at those vertices, this means that we can place the respective vertices either to \(1\) or \(-1\) without breaking equilibrium. 
+
+Next, we perturb slightly the terminal state, \(\xi_m^{(0)} \to \xi_m^{(0)} \left( 1 - y_m \right)\), where \(0 \leq y_m \ll 1\), and consider the dynamics of the perturbed state. Let us look at the motion of the \(l\)-th node perturbation. Retaining the main term, we obtain
+
+\[
+\dot{y}_l = \delta C_l(\boldsymbol{\sigma}) + \mathcal{O}(\mathbf{y}),
+\]
+
+where \(\delta C_l(\boldsymbol{\sigma})\) is the same cut variation with inverting \(\sigma_l\) as defined above, and \(\mathcal{O}(\mathbf{y})\) denotes terms vanishing as \(y_m \to 0\).
+
+We need to distinguish two cases: \(\delta C_l(\boldsymbol{\sigma}) \ne 0\) and \(\delta C_l(\boldsymbol{\sigma}) = 0\).
+
+The first case is the most important and, coincidentally, is the simplest one. Since there is only a finite number of possible values of cut, non-zero \(|\delta C_l(\boldsymbol{\sigma})|\) is bounded from below. Therefore, considering sufficiently small perturbations, we can make the first term in the right-hand side of \(\dot{y}_l\) as dominant as we want.
+
+This yields a simple general criterion for stability of the terminal state at a hypercube vertex, \(\boldsymbol{\sigma}\). If there exists such \(l\) that \(\delta C_l(\boldsymbol{\sigma}) > 0\), then configuration \(\boldsymbol{\sigma}\) is /unstable/, and arbitrary perturbation with \(y_l > 0\) moves the system away from it.
+
+
 
 **  Parallelization:  Dynamics vs Decision 
 
