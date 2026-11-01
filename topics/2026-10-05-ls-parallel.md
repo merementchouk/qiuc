@@ -72,7 +72,7 @@ where $\xi_m \in [-1, 1]$.
 
 Enforcing the condition $A_{m,m} = 0$ (for binary spins this was not necessary as these terms do not contribute), we observe that $C(\boldsymbol{\sigma})$ is a poly-linear (multi-affine) function of $\xi_m$. Being maximized over the cube $[-1,1]^N$, it reaches its maxima at the extreme points of the body, the cube's vertices.
 
-Indeed, suppose the maximum is reached elsewhere, so that not all $\xi_m = \pm 1$, considering one of such "in-between" $\xi_l$ and applying the condition $\partial^2 C(\boldsymbol{\xi}) / \partial \xi_l^2 = 0$. It should be noted that if the maximum is indeed reached at some $-1 < \xi_l < 1$, this implies that the maximum value does not depend on $\xi_l$ and we can freely choose it either $1$ or $-1$.
+Indeed, suppose the maximum is reached elsewhere, so that not all $\xi_m = \pm 1$. Let's consider one of such "in-between" $\xi_l$ and apply the condition $\partial^2 C(\boldsymbol{\xi}) / \partial \xi_l^2 = 0$. We see that if the maximum is indeed reached at some $-1 < \xi_l < 1$, then the maximum value does not depend on $\xi_l$ and we can freely choose it either $1$ or $-1$.
 
 
 ## Dynamical realization
@@ -97,9 +97,15 @@ where $\delta C_l(\boldsymbol{\sigma})$ is the same cut variation with inverting
 
 We need to distinguish two cases: $\delta C_l(\boldsymbol{\sigma}) \ne 0$ and $\delta C_l(\boldsymbol{\sigma}) = 0$.
 
-The first case is the most important and, coincidentally, is the simplest one. Since there is only a finite number of possible values of cut, non-zero $|\delta C_l(\boldsymbol{\sigma})|$ is bounded from below. Therefore, considering sufficiently small perturbations, we can make the first term in the right-hand side of $\dot{y}_l$ as dominant as we want.
+The first case is the most important and, coincidentally, is the simplest one. Since the number of possible values of cut is finite, non-zero $\vert \delta C_l(\boldsymbol{\sigma})\vert$ is bounded from below. Therefore, considering sufficiently small perturbations, we can make the first term in the right-hand side of $\dot{y}_l$ as dominant as we want.
 
 This yields a simple general criterion for stability of the terminal state at a hypercube vertex, $\boldsymbol{\sigma}$. If there exists such $l$ that $\delta C_l(\boldsymbol{\sigma}) > 0$, then configuration $\boldsymbol{\sigma}$ is *unstable*, and arbitrary perturbation with $y_l > 0$ moves the system away from it.
+
+Consequently, the network dynamics terminates in a state $\boldsymbol{\sigma}$ with $\delta C_l(\boldsymbol{\sigma}) \leq 0$ for all $l$. This coincides formally with the termination condition of $1$-opt local search.
+
+There is however a subtlety that we will not explore in detail. The argument above does not imply that *all* terminal states of $1$-opt local search are stable equilibria of the introduced relaxed model. The reason is the dynamics of perturbations corresponding to $\delta C_l(\boldsymbol{\sigma}) = 0$.
+
+&hellip; slightly better
 
 
 ## Parallelization:  Dynamics vs Decision
