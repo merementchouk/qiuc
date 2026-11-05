@@ -1,0 +1,28 @@
+# 2026-11-2 Mon: V-2 model, adiabatic computing
+
+The PDF file with the meeting (handwritten) notes can be found [here](../assets/meetings/2026-10-12/QIUC Notes 2026-11-2.pdf).
+
+
+## Motivation
+
+The unique dynamical features of the V-2 model expose additional computational capabilities in addition the Hamming-unbounded exploration of the search space discussed the last time.
+
+One of those features, adiabatic evaluation of complex Boolean functions, is especially interesting because it may provide a way to understand mysterious V-2 model underperformance observed in numerical simulations.
+
+
+## Spin-representation of Boolean functions
+
+The birds-eye view of spin representations of vectorial Boolean functions, $\boldsymbol{y} = f(\boldsymbol{x})$ is rather straightforward. First, we associate the discrete component of the relaxed spins with the Boolean variables. Respectively, we have input spins representing input arguments $\boldsymbol{x}$, spins representing output arguments $\boldsymbol{y}$, auxiliary spins that may be needed by the implementation $\boldsymbol{\tau}$, and, in the case of non-self-dual functions, the fixed auxiliary spin $\sigma_0 \equiv 1$. Next, we require that a maximum cut partition is reached only if the input and output spins satisfy the function truth table. Now, with the input spins set to the provided input value, finding the maximum cut partition returns the function outcome.
+
+We will dive into spin representations of Boolean functions in due time. It is worth, however, to comment on feasibility of spin representations. The requirement of obtaining the maximum cut on and only on truth table states may seem hard to meet. It is important, therefore, that while this is not an easy problem, it is, at most, as complex as constructing a Boolean function using simpler functions connected in a Boolean circuit. This is guaranteed by the composition theorem, which we will prove later.
+
+
+## Convergence from non-generic states
+
+The composition theorem does not imply how probable is the convergence of a V-2-model-driven network to desired states starting from generic ones. A spin representation obtained by translating straightforwardly a Boolean circuit may exhibit dynamical bottlenecks. Such bottlenecks are formally unstable: there are (small) perturbations that drive the network away from the bottleneck. However, it remains unknown whether there exists a way to construct a spin representation that would exclude bottlenecks from the start.
+
+One promising approach is based on considering convergence from a non-generic state. Say, we know the *canonical* network state $\left( \boldsymbol{x}_0, \boldsymbol{y}_0, \boldsymbol{\tau}_0 \right)$, that is the state of the whole network corresponding to $\boldsymbol{y}_0 = f(\boldsymbol{x}_0)$. Next, we want to evaluate the function at a different input $\boldsymbol{x} = \delta(\boldsymbol{x} \vert \boldsymbol{x}_0) \oplus \boldsymbol{x}_0$, where $\delta(\boldsymbol{x} \vert \boldsymbol{x}_0)$ is a binary vector describing the "transition" between different inputs, and $\oplus$ is exclusive OR (or sum modulo two in the $\lbrace 0, 1 \rbrace$ Boolean alphabet). In other words, we have
+
+$$y = f(\boldsymbol{x}) = f\left( \delta(\boldsymbol{x} \vert \boldsymbol{x}_0) \oplus \boldsymbol{x}_0 \right) = \delta(\boldsymbol{y} \vert \boldsymbol{y}_0) \oplus \boldsymbol{y}_0$$
+
+The unique dynamical features of the V-2 model come to play through relating $\delta(\boldsymbol{y} \vert \boldsymbol{y}_0)$ and $\delta(\boldsymbol{x} \vert \boldsymbol{x}_0)$. The sole fact that such a relationship may manifest at the level of a circuit representation of the Boolean function seems non-trivial. This is why it is worth ensuring that foundations of the dynamical theory of the V-2 model are strong.

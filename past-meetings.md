@@ -3,16 +3,17 @@ Here are quick recaps (AI-seeded and edited) and links to additional materials f
 
 # Table of Contents
 
-1.  [2026-09-14 Mon: Overall scope and Ising computing](#org130271a)
-2.  [2026-09-21 Mon: More spin algorithms and V-2 model](#orgd4b9eb7)
-3.  [2026-09-28 Mon: Adiabatic Quantum Computing](#org7c026b3)
-4.  [2026-10-05 Mon: Parallelized local search](#org6f29484)
-5.  [2026-10-12 Mon: Local searches and simulated annealing](#org33c3c42)
-6.  [2026-10-19 Mon: General discussion of unconventional computing](#orga369588)
-7.  [2026-10-26 Mon: R-DIMs and V-2 model](#org35fcc05)
+1.  [2026-09-14 Mon: Overall scope and Ising computing](#orga9d10dd)
+2.  [2026-09-21 Mon: More spin algorithms and V-2 model](#orgc57bd9e)
+3.  [2026-09-28 Mon: Adiabatic Quantum Computing](#org3150d86)
+4.  [2026-10-05 Mon: Parallelized local search](#orgd491e01)
+5.  [2026-10-12 Mon: Local searches and simulated annealing](#orgb4b18d4)
+6.  [2026-10-19 Mon: General discussion of unconventional computing](#org311ff3d)
+7.  [2026-10-26 Mon: R-DIMs and V-2 model](#org9c9a2c8)
+8.  [2026-11-2 Mon: V-2 model and adiabatic techniques](#org788f534)
 
 
-<a id="org130271a"></a>
+<a id="orga9d10dd"></a>
 
 # 2026-09-14 Mon: Overall scope and Ising computing
 
@@ -27,7 +28,7 @@ Mikhail announced plans to explore additional algorithms and computing models in
 Additional details can be found [here](./topics/2026-09-14-dipath.html).
 
 
-<a id="orgd4b9eb7"></a>
+<a id="orgc57bd9e"></a>
 
 # 2026-09-21 Mon: More spin algorithms and V-2 model
 
@@ -46,7 +47,7 @@ The session concluded by emphasizing that unconventional computing involves unde
 Additional details can be found [here](./topics/2026-09-21-v2-intro.html).
 
 
-<a id="org7c026b3"></a>
+<a id="org3150d86"></a>
 
 # 2026-09-28 Mon: Adiabatic Quantum Computing
 
@@ -59,7 +60,7 @@ The broader lesson for quantum-inspired unconventional computing is the value of
 Additional details can be found [here](./topics/2026-09-28-aqc-intro.html).
 
 
-<a id="org6f29484"></a>
+<a id="orgd491e01"></a>
 
 # 2026-10-05 Mon: Parallelized local search
 
@@ -72,7 +73,7 @@ At the same time, reformulating the maximum cut problem as finding a maximum of 
 Additional details can be found [here](./topics/2026-10-05-ls-parallel.html).
 
 
-<a id="org33c3c42"></a>
+<a id="orgb4b18d4"></a>
 
 # 2026-10-12 Mon: Local searches and simulated annealing
 
@@ -83,17 +84,26 @@ A brief overview of the fundamental challenges faced by search algorithms was gi
 Additional details can be found [here](./topics/2026-10-12-ls-sa-maxcut.html).
 
 
-<a id="orga369588"></a>
+<a id="org311ff3d"></a>
 
 # 2026-10-19 Mon: General discussion of unconventional computing
 
 A freeform discussion of unconventional computing: potential implications of multiple solutions in developing new pipelines, problems with adopting quantum algorithms, the difficulty of comparing classical and quantum oracle models, potential implications of inherently isotropic phase space of R-DIMs, challenges of communicating complex scientific ideas, techniques of involving LLM-based AI to research activities.
 
 
-<a id="org35fcc05"></a>
+<a id="org9c9a2c8"></a>
 
 # 2026-10-26 Mon: R-DIMs and V-2 model
 
 First, we overviewed the general challenge faced by typical local search algorithms. They are prone to ending up in configurations that do not yield the ground state (maximum cut partition), but cannot be improved within the set of neighboring spin configurations within the bounded Hamming distance. In particular, this means that it may be hard for local search algorithms to implement the spin version of the algorithm finding a path in bipartite directed graph. It is, therefore, important that an R-DIM driven by the V-2 model performs a search that is not Hamming-distance bounded. This meeting starts a few-step exploration of the dynamical properties of the V-2 model and its computational capabilities.
 
 Additional details can be found [here](./topics/2026-10-26-v2-1.html).
+
+
+<a id="org788f534"></a>
+
+# 2026-11-2 Mon: V-2 model and adiabatic techniques
+
+The meeting highlighted computational capabilities of the V-2 model, focusing on how its unique dynamical features unlock unconventional problem-solving. While our previous session touched on how the V-2 model navigates search spaces far more freely than standard local-search algorithms, this meeting showed how that flexibility connects with coordinated multi-spin transitions. Such transitions effectively allow clusters of spins to move without "friction" across the system's state space. We framed this through two main applications: first, performing adiabatic computation of complex Boolean functions by slowly guiding input spins so that related spins naturally follow to produce the output; and second, assessing how this collective motion may significantly impact the energy budget needed to run complex operations.
+
+Additional details can be found [here](./topics/2026-11-2-v2-adiabatic.html).
