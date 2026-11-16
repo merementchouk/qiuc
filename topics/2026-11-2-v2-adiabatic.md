@@ -1,6 +1,6 @@
 # 2026-11-2 Mon: V-2 model, adiabatic computing
 
-The PDF file with the meeting (handwritten) notes can be found [here](../assets/meetings/2026-10-12/QIUC Notes 2026-11-2.pdf).
+The PDF file with the meeting (handwritten) notes can be found [here](../assets/meetings/2026-11-2/QIUC Notes 2026-11-2.pdf).
 
 
 ## Motivation

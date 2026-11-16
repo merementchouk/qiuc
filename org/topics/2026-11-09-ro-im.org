@@ -1,0 +1,10 @@
+#+title: V-2 model - adiabatic computing
+#+subtitle: Meetings details and links
+#+date: 2026-11-2
+#+OPTIONS: title:nil toc:nil
+
+* 2026-11-09 Mon: Ring oscillators and Ising machines
+
+The PDF file with the meeting (handwritten) notes can be found [[../assets/meetings/2026-11-09/QIUC Notes 2026-11-09.pdf][here]].
+
+Details coming soon...
