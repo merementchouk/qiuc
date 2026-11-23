@@ -3,18 +3,19 @@ Here are quick recaps (AI-seeded and edited) and links to additional materials f
 
 # Table of Contents
 
-1.  [2026-09-14 Mon: Overall scope and Ising computing](#orgc470aa7)
-2.  [2026-09-21 Mon: More spin algorithms and V-2 model](#org63c6863)
-3.  [2026-09-28 Mon: Adiabatic Quantum Computing](#orgf6b960c)
-4.  [2026-10-05 Mon: Parallelized local search](#org1b35a6b)
-5.  [2026-10-12 Mon: Local searches and simulated annealing](#org2a21f05)
-6.  [2026-10-19 Mon: General discussion of unconventional computing](#orgfeecc18)
-7.  [2026-10-26 Mon: R-DIMs and V-2 model](#org0f741ad)
-8.  [2026-11-2 Mon: V-2 model and adiabatic techniques](#org49348f6)
-9.  [2026-11-09 Mon: Ring oscillators and Ising machines](#orgcbf519e)
+1.  [2026-09-14 Mon: Overall scope and Ising computing](#org42db090)
+2.  [2026-09-21 Mon: More spin algorithms and V-2 model](#orgc75ec6c)
+3.  [2026-09-28 Mon: Adiabatic Quantum Computing](#orga7bc423)
+4.  [2026-10-05 Mon: Parallelized local search](#orgc0e0a85)
+5.  [2026-10-12 Mon: Local searches and simulated annealing](#org2cbf9b3)
+6.  [2026-10-19 Mon: General discussion of unconventional computing](#orgd133322)
+7.  [2026-10-26 Mon: R-DIMs and V-2 model](#orge4f5edb)
+8.  [2026-11-02 Mon: V-2 model and adiabatic techniques](#org3a3bf72)
+9.  [2026-11-09 Mon: Ring oscillators and Ising machines](#orgc0a8d5e)
+10. [2026-11-16 Mon: Dynamical response of the V-2 model](#org8ffc42c)
 
 
-<a id="orgc470aa7"></a>
+<a id="org42db090"></a>
 
 # 2026-09-14 Mon: Overall scope and Ising computing
 
@@ -29,7 +30,7 @@ Mikhail announced plans to explore additional algorithms and computing models in
 Additional details can be found [here](./topics/2026-09-14-dipath.html).
 
 
-<a id="org63c6863"></a>
+<a id="orgc75ec6c"></a>
 
 # 2026-09-21 Mon: More spin algorithms and V-2 model
 
@@ -48,7 +49,7 @@ The session concluded by emphasizing that unconventional computing involves unde
 Additional details can be found [here](./topics/2026-09-21-v2-intro.html).
 
 
-<a id="orgf6b960c"></a>
+<a id="orga7bc423"></a>
 
 # 2026-09-28 Mon: Adiabatic Quantum Computing
 
@@ -61,7 +62,7 @@ The broader lesson for quantum-inspired unconventional computing is the value of
 Additional details can be found [here](./topics/2026-09-28-aqc-intro.html).
 
 
-<a id="org1b35a6b"></a>
+<a id="orgc0e0a85"></a>
 
 # 2026-10-05 Mon: Parallelized local search
 
@@ -74,7 +75,7 @@ At the same time, reformulating the maximum cut problem as finding a maximum of 
 Additional details can be found [here](./topics/2026-10-05-ls-parallel.html).
 
 
-<a id="org2a21f05"></a>
+<a id="org2cbf9b3"></a>
 
 # 2026-10-12 Mon: Local searches and simulated annealing
 
@@ -85,14 +86,14 @@ A brief overview of the fundamental challenges faced by search algorithms was gi
 Additional details can be found [here](./topics/2026-10-12-ls-sa-maxcut.html).
 
 
-<a id="orgfeecc18"></a>
+<a id="orgd133322"></a>
 
 # 2026-10-19 Mon: General discussion of unconventional computing
 
 A freeform discussion of unconventional computing: potential implications of multiple solutions in developing new pipelines, problems with adopting quantum algorithms, the difficulty of comparing classical and quantum oracle models, potential implications of inherently isotropic phase space of R-DIMs, challenges of communicating complex scientific ideas, techniques of involving LLM-based AI to research activities.
 
 
-<a id="org0f741ad"></a>
+<a id="orge4f5edb"></a>
 
 # 2026-10-26 Mon: R-DIMs and V-2 model
 
@@ -101,19 +102,28 @@ First, we overviewed the general challenge faced by typical local search algorit
 Additional details can be found [here](./topics/2026-10-26-v2-1.html).
 
 
-<a id="org49348f6"></a>
+<a id="org3a3bf72"></a>
 
-# 2026-11-2 Mon: V-2 model and adiabatic techniques
+# 2026-11-02 Mon: V-2 model and adiabatic techniques
 
 The meeting highlighted computational capabilities of the V-2 model, focusing on how its unique dynamical features unlock unconventional problem-solving. While our previous session touched on how the V-2 model navigates search spaces far more freely than standard local-search algorithms, this meeting showed how that flexibility connects with coordinated multi-spin transitions. Such transitions effectively allow clusters of spins to move without "friction" across the system's state space. We framed this through two main applications: first, performing adiabatic computation of complex Boolean functions by slowly guiding input spins so that related spins naturally follow to produce the output; and second, assessing how this collective motion may significantly impact the energy budget needed to run complex operations.
 
-Additional details can be found [here](./topics/2026-11-2-v2-adiabatic.html).
+Additional details can be found [here](./topics/2026-11-02-v2-adiabatic.html).
 
 
-<a id="orgcbf519e"></a>
+<a id="orgc0a8d5e"></a>
 
 # 2026-11-09 Mon: Ring oscillators and Ising machines
 
-The meeting focused on implementing Ising machines using ring oscillators, the corresponding theoretical foundations and preliminary experimental results. Mikhail explained how ring oscillators work using inverters in a feedback loop, showing that odd numbers of inverters create stable oscillatory states, and discussed how coupling between oscillators can align or misalign their phases based on positive or negative coupling. DeRozan presented simulation results showing that when three ring oscillators were connected with specific wiring patterns, the phases of two oscillators synchronized while the third remained out of phase, confirming Mikhail's theoretical predictions about phase alignment based on coupling configurations. The discussion revealed that this approach could potentially represent multiple clusters, though Mikhail noted that more complex configurations with all positive couplings remained to be explored.
+The meeting focused on implementing Ising machines using ring oscillators, the corresponding theoretical foundations and preliminary experimental results. The general operating principles of ring oscillators made of odd number of inverters in a feedback loop. A qualitative picture of the phase dynamics in a system of coupled ring oscillators was presented with the focus on positive (pulling the phases together) and negative (repulsing phases) couplings. DeRozan presented simulation results showing that when three ring oscillators were connected with specific wiring patterns, the phases of two oscillators synchronized while the third remained out of phase, confirming qualitative theoretical predictions about phase alignment based on coupling configurations. The discussion revealed that this approach could potentially represent multiple clusters, though Mikhail noted that more complex configurations with all positive couplings remained to be explored.
 
 Additional details can be found [here](./topics/2026-11-09-ro-im.html).
+
+
+<a id="org8ffc42c"></a>
+
+# 2026-11-16 Mon: Dynamical response of the V-2 model
+
+The meeting focused on discussing the dynamical response of the V-2 model with respect to adiabatic displacement of relaxed spins representing input arguments. Ali presented detailed analysis of full adder circuits, explaining the challenges with equality junctions and the role of pinned spins in preventing proper reorientation of the circuit during computation. The discussion revealed that increasing the magnitude of equality junction weights did not resolve the issues, suggesting that the problem may stem from the fixed spins within the circuit gates. The overall conclusion was that the behavior of the V-2 model observed in numerical simulations deviates too significantly from the expectations formed by a simplified theoretical framework and presents an interesting puzzle.
+
+Additional details can be found [here](./topics/2026-11-16-v2-ac-1.html).

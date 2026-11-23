@@ -1,0 +1,9 @@
+#+title: V-2 model - adiabatic computing
+#+subtitle: Meetings details and links
+#+date: 2026-11-2
+#+OPTIONS: title:nil toc:nil
+
+* 2026-11-09 Mon: Dynamical response of the V-2 model
+
+The PDF file with the meeting (handwritten) notes can be found [[../assets/meetings/2026-11-16/QIUC Notes 2026-11-16.pdf][here]].
+
